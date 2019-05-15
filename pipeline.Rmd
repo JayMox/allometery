@@ -73,7 +73,7 @@ dev.off()
 
 #Conclusions
 My final plot: 
-![](output/hVsw_relationship.png)
+![](output/hVSw_relationship.png)
 
 
 The slope of the relationship between height and weight is `r round(mod$coef[2], 2)`

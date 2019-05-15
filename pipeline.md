@@ -112,7 +112,9 @@ dev.off()
     ## quartz_off_screen 
     ##                 2
 
-Conclusion
-==========
+Conclusions
+===========
 
-My final plot: ![](output/hVsw_relationship.png) The slope of the relationship between height and weight is 2.4
+My final plot: ![](output/hVSw_relationship.png)
+
+The slope of the relationship between height and weight is 2.4
