@@ -2,7 +2,9 @@
 title: "Analytical pipeline"
 author: "Jerry Moxley"
 date: "May 14, 2019"
-output: html_document
+output: github_document
+editor_options:
+  chunk_output_type: console
 ---
 ## Allometry Project
 
@@ -61,7 +63,7 @@ anova(mod)
 h <- sort(seeds$Height_log10)
 pred <- predict(mod, list(Height_log10 = h), interval = "confidence")
 
-pdf('output/hVSw_relationship.pdf')
+png('output/hVSw_relationship.png')
 plot(Weight_log10 ~ Height_log10, data = seeds, col = "grey", xlab = "Height, log10")
 lines(h, pred[,1], col="black", lty=2)
 polygon(c(h, rev(h)), c(pred[,2], rev(pred[,3])),
@@ -69,7 +71,11 @@ polygon(c(h, rev(h)), c(pred[,2], rev(pred[,3])),
 dev.off()
 ```
 
-#Conclusion
+#Conclusions
+My final plot: 
+![](output/hVsw_relationship.png)
+
+
 The slope of the relationship between height and weight is `r round(mod$coef[2], 2)`
 
 
